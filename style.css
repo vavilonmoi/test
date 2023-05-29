@@ -1,0 +1,440 @@
+@font-face {
+    font-family: 'Inter';
+    src: url(fonts/Inter-Light.ttf) format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(fonts/Inter-Regular.ttf) format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(fonts/Inter-Medium.ttf) format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(fonts/Inter-Bold.ttf) format('truetype');
+    font-weight: 700;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    line-height: 0;
+}
+
+body {
+    font-family: 'Inter';
+    font-size: 15px;
+    font-weight: 400;
+    color: #202020;
+    margin: 0;
+}
+
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .container {
+        width: 1470px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    min-width: 320px;
+    position: relative;
+    overflow: hidden;
+}
+
+.imgW {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgW img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* header */
+.header {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav li {
+    padding: 0 15px;
+}
+
+.nav a {
+    display: inline-block;
+    color: #202020;
+    line-height: 100%;
+    text-decoration: none;
+}
+
+.nav .parent>a {
+    position: relative;
+    padding-right: 15px;
+}
+
+.nav .parent>a::before {
+    position: absolute;
+    content: url(images/vector.png);
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+.phoneBlock {
+    border: 1px solid #202020;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    width: 190px;
+    height: 35px;
+    padding: 0 15px 0 45px;
+    background: url(images/phone.png) no-repeat 13px 8px;
+}
+
+.phoneBlock a {
+    color: #202020;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 140%;
+}
+
+/* end header */
+
+/* banner */
+.banner {
+    background: #FC697B;
+    padding: 80px 0 115px;
+}
+
+.banner .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.banner h1 {
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 110%;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.banner .title .txt {
+    width: 460px;
+    padding-right: 192px;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 140%;
+}
+
+.wrapBanners {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 20px;
+}
+
+.nucBanner {
+    background: #fff;
+    padding: 10px 10px 15px;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nucBanner .imgW {
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.nucBanner .txt {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 135%;
+    color: #D1D1D1;
+    padding-left: 10px;
+}
+
+.nucBanner .name {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 135%;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.nucBanner .bot {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 15px 0 10px;
+}
+
+.nucBanner .txtBlock {
+    display: flex;
+    align-items: flex-end;
+}
+
+.nucBanner .price {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+    white-space: nowrap;
+}
+
+.nucBanner .price span {
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 140%;
+    color: #FF3F56;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.nucBanner .bot .txt {
+    padding: 0 40px 0 25px;
+}
+
+.nucBanner .contact {
+    color: #202020;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 22px;
+    border: 1px solid #202020;
+    border-radius: 13px;
+    transition: .4s;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-left: auto;
+    width: fit-content;
+}
+
+.nucBanner .contact:hover {
+    background: #202020;
+    color: #fff;
+}
+
+/* end banner */
+
+/* services */
+.services {
+    padding: 150px 0 115px;
+}
+
+.services .title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services h1 {
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 110%;
+    color: #FF3F56;
+}
+
+.services .title .txtBlock {
+    width: 540px;
+    padding-right: 55px;
+    margin-bottom: 50px;
+}
+
+.services .title .name {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 135%;
+}
+
+.services .title .txt {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+}
+
+.wrapServices {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(5, 200px);
+    grid-gap: 18px;
+    margin-bottom: 80px;
+}
+
+.nucServices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.1);
+    border-radius: 35px;
+    overflow: hidden;
+}
+
+.nucServices .icon {
+    margin-bottom: 13px;
+}
+
+.nucServices .name {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 135%;
+    text-align: center;
+}
+
+.nucServices.imgServ1 {
+    grid-column: span 2;
+    box-shadow: none;
+}
+
+.nucServices.imgServ2 {
+    grid-column: 3 / 5;
+    grid-row: 3 / 6;
+    box-shadow: none;
+}
+
+.botTxtBlock {
+    display: flex;
+    justify-content: space-between;
+}
+
+.botTxtBlock p {
+    width: 712px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 135%;
+}
+
+.botTxtBlock a {
+    background: #202020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 60px;
+    border-radius: 30px;
+    padding: 0 190px;
+    color: #fff;
+    text-decoration: none;
+    height: fit-content;
+}
+
+/* ens services */
+
+@media (max-width: 1499px) {
+    .banner .title .txt {
+        width: 365px;
+        padding-right: 0;
+    }
+    .nucBanner .bot {
+        display: block;
+    }
+    .nucBanner .txtBlock {
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 1199px) {
+    .banner .title .txt {
+        width: 300px;
+    }
+    .banner h1 {
+        font-size: 45px;
+    }
+    .nucBanner .name {
+        font-size: 22px;
+    }
+}
+@media (max-width: 991px) {
+    .wrapBanners {
+        grid-template-columns: 1fr;
+    }
+    .nucBanner .imgW img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .nucBanner .bot {
+        display: flex;
+    }
+}
+@media (max-width: 767px) {
+    .banner {
+        padding: 50px 0;
+    }
+    .banner .title {
+        display: block;
+    }
+    .banner h1 {
+        margin-bottom: 15px;
+        font-size: 35px;
+    }
+    .banner .title .txt {
+        font-size: 17px;
+    }
+    .nucBanner .name {
+        font-size: 19px;
+    }
+    .nucBanner .bot {
+        display: block;
+    }
+    .nucBanner .bot .txt {
+        padding: 0 0 0 15px;
+    }
+}
